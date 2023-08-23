@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.AddProductActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="24dp"
+            style="@style/CustomTextInputLayout"
+            app:hintTextColor="#525151"
+            android:textColorHint="#525151"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="Producto">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:maxLines="1"
+                android:layout_height="wrap_content"
+                style="@style/TextInputEditTextStyle"
+                android:imeOptions="actionNext"
+                android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_price"
+            style="@style/CustomTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:hint="Precio"
+            android:textColorHint="#525151"
+            app:hintTextColor="#525151"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextInputEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:maxLines="1"
+                android:imeOptions="actionNext"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_description"
+            style="@style/CustomTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="24dp"
+            android:hint="Descripción"
+            android:textColorHint="#525151"
+            app:hintTextColor="#525151"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_price">
+
+        <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextInputEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="5"
+                android:imeOptions="actionNext"
+                android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_category"
+            style="@style/CustomTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:hint="Categoría"
+            android:textColorHint="#525151"
+            app:hintTextColor="#525151"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_description">
+
+        <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextInputEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+            android:id="@+id/btnFoto"
+            style="@style/CustomButtonStyle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="24dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginHorizontal="24dp"
+            android:drawableTop="@drawable/camera"
+            android:text="TOMAR PHOTO"
+            app:layout_constraintEnd_toStartOf="@+id/btnGalery"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_category" />
+
+    <Button
+            android:id="@+id/btnGalery"
+            style="@style/CustomButtonStyle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="24dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginHorizontal="24dp"
+            android:drawableTop="@drawable/photo"
+            android:text="SUBIR IMAGEN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnFoto"
+            app:layout_constraintTop_toBottomOf="@+id/til_category" />
+
+    <ImageView
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:contentDescription="@null"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:layout_margin="24dp"
+            android:background="@color/font"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFoto"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegistrar" />
+
+    <Button
+            android:text="Registrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRegistrar"
+            android:layout_margin="24dp"
+            style="@style/CustomButtonStyle2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">APP MOVIL</string>
+    <string name="bienvenido">INICIANDO...</string>
+    <string name="version">VERSION DE PRUEBA</string>
+    <string name="login">INICIAR SESIÓN</string>
+
+    <string name="google_api_key" translatable="false">AIzaSyCjT4Lp_VzabRg1sDe7_-Pf6x7wYgsVSyA</string>
+    <string name="web_client_id">103241437204312546316</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

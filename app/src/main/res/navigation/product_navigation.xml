@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/product_navigation"
+        app:startDestination="@id/menuListFragment">
+
+    <fragment
+            android:id="@+id/menuListFragment"
+            android:name="com.example.ec_final_napapachasjohann.fragments.MenuListFragment"
+            android:label="fragment_menu_list"
+            tools:layout="@layout/fragment_menu_list" >
+        <action
+                android:id="@+id/action_menuListFragment_to_detailFragment"
+                app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/favoritosFragment"
+            android:name="com.example.ec_final_napapachasjohann.fragments.FavoritosFragment"
+            android:label="fragment_favoritos"
+            tools:layout="@layout/fragment_favoritos" >
+        <action
+                android:id="@+id/action_favoritosFragment_to_detailFragment"
+                app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/menuFirebaseFragment"
+            android:name="com.example.ec_final_napapachasjohann.fragments.MenuFirebaseFragment"
+            android:label="fragment_menu_firebase"
+            tools:layout="@layout/fragment_menu_firebase" />
+    <fragment
+            android:id="@+id/logoutFragment"
+            android:name="com.example.ec_final_napapachasjohann.fragments.LogoutFragment"
+            android:label="fragment_logout"
+            tools:layout="@layout/fragment_logout" />
+    <fragment
+            android:id="@+id/detailFragment"
+            android:name="com.example.ec_final_napapachasjohann.fragments.DetailFragment"
+            android:label="fragment_detail"
+            tools:layout="@layout/fragment_detail" >
+        <argument
+                android:name="products"
+                app:argType="com.example.ec_final_napapachasjohann.model.Products" />
+
+    </fragment>
+</navigation>

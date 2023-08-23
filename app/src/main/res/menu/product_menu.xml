@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@id/menuListFragment"
+            android:enabled="true"
+            android:icon="@drawable/home"
+            android:title="Lista API"/>
+
+    <item
+            android:id="@id/favoritosFragment"
+            android:enabled="true"
+            android:icon="@drawable/favorito"
+            android:title="Favoritos"/>
+
+    <item
+            android:id="@id/menuFirebaseFragment"
+            android:enabled="true"
+            android:icon="@drawable/menu_fb"
+            android:title="Firebase"/>
+
+    <item
+            android:id="@id/logoutFragment"
+            android:enabled="true"
+            android:icon="@drawable/logout"
+            android:title="Logout"/>
+
+</menu>
